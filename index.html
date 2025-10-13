@@ -443,10 +443,11 @@
                 layerLogo.style.transform = `translate(-50%, ${logoMove}px)`;
                 layerLogo.style.opacity = Math.max(0, logoOpacity);
                 
-                // Character: stays in place but scales DOWN (gets smaller)
-                const charScale = 1 - (scrollPercent * 0.7); // shrinks from 1 to 0.3
-                const charOpacity = 1 - (scrollPercent * 1.5);
-                layerCharacter.style.transform = `scale(${Math.max(0.2, charScale)})`;
+                // Character: moves down like logo AND scales DOWN (gets smaller)
+                const charScale = 1 - (scrollPercent * 0.6); // shrinks from 1 to 0.4
+                const charMove = scrolled * 0.8; // same speed as logo
+                const charOpacity = 1 - (scrollPercent * 1.3);
+                layerCharacter.style.transform = `translateY(${charMove}px) scale(${Math.max(0.2, charScale)})`;
                 layerCharacter.style.opacity = Math.max(0, charOpacity);
             }
             
