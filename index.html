@@ -169,7 +169,7 @@
             left: 50%; 
             bottom: -50%;
             transform: translateX(-50%) scale(0.5); 
-            height: 75vh;
+            height: 85vh;
             opacity: 0;
             z-index: 3;
             transition: all 0.1s linear;
@@ -253,12 +253,8 @@
             color: rgba(214, 161, 0, 0.7);
             animation: bounce 2s infinite;
             z-index: 100;
-            opacity: 0;
+            opacity: 1;
             transition: opacity 0.5s ease;
-        }
-
-        .scroll-indicator.visible {
-            opacity: 0.7;
         }
 
         @keyframes bounce {
@@ -858,7 +854,6 @@
             document.body.classList.add('started');
             this.classList.add('hidden');
             document.getElementById('mainContent').classList.add('visible');
-            document.getElementById('scrollIndicator').classList.add('visible');
         });
 
         const heroTitle = document.getElementById('heroTitle');
