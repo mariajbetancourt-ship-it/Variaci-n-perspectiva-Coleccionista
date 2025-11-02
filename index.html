@@ -604,9 +604,9 @@
     </style>
 </head>
 <body>
-    <iframe id="introMusic" style="display:none;" src="https://www.youtube.com/embed/szfhlVZmWF0?autoplay=1&loop=1&playlist=szfhlVZmWF0" allow="autoplay"></iframe>
+    <iframe id="introMusic" style="display:none;" src="https://www.youtube.com/embed/szfhlVZmWF0?autoplay=1&loop=1&playlist=szfhlVZmWF0&mute=0&enablejsapi=1" allow="autoplay; encrypted-media"></iframe>
     
-    <iframe id="readingMusic" style="display:none;" src="https://www.youtube.com/embed/42tQzZt2mK8?loop=1&playlist=42tQzZt2mK8" allow="autoplay"></iframe>
+    <iframe id="readingMusic" style="display:none;" src="" allow="autoplay; encrypted-media"></iframe>
 
     <div class="click-screen" id="clickScreen">
         <div class="click-bg">
@@ -848,8 +848,11 @@
             const introMusic = document.getElementById('introMusic');
             const readingMusic = document.getElementById('readingMusic');
             
+            // Detener música de intro
             introMusic.src = '';
-            readingMusic.src = 'https://www.youtube.com/embed/42tQzZt2mK8?autoplay=1&loop=1&playlist=42tQzZt2mK8';
+            
+            // Cargar y reproducir música de lectura inmediatamente
+            readingMusic.src = 'https://www.youtube.com/embed/42tQzZt2mK8?autoplay=1&loop=1&playlist=42tQzZt2mK8&mute=0&enablejsapi=1';
             
             document.body.classList.add('started');
             this.classList.add('hidden');
